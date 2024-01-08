@@ -11,7 +11,6 @@ TODO: Instantiate an object which represents cola. Make sure that the color is s
  print the getInfo on the screen.
 TODO: Print the temperature on the screen.
 
-USE TYPEHINTING EVERYWHERE!
 */
 
 declare(strict_types=1);
