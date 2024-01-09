@@ -36,6 +36,10 @@ class Beverage
     public function getColor() {
         return $this->color;
     }
+
+    public function setColor(string $newColor) {
+        $this->color = $newColor;
+    }
 }
 
 class Beer extends Beverage
@@ -61,3 +65,7 @@ echo $duvel->getAlcohol() . "<br>";
 echo $duvel->getColor() . "<br>";
 
 echo $duvel->getInfo() . "<br>";
+
+$duvel->setColor("light");
+
+echo $duvel->getColor() . "<br>";
