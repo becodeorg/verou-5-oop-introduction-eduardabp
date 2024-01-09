@@ -35,7 +35,7 @@ class Beverage
 }
 
 const barname = 'Het Vervolg';
-echo $barname;
+echo barname . "<br>";
 
 class Beer extends Beverage
 {
@@ -52,6 +52,13 @@ class Beer extends Beverage
     public function getAlcohol() {
         return $this->alcoholPercentage;
     }
+
+    public function getBarname()
+    {
+        return barname;
+    }
 }
 
 $duvel = new Beer("blond", 3.5, "Duvel", 8.5);
+
+echo $duvel->getBarname();
