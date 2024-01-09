@@ -41,13 +41,26 @@ class Beer extends Beverage
     public $name;
     public $alcoholPercentage;
 
-    public function __construct (string $color, float $price, string $temperature = "cold", string $name, float $alcoholPercentage) {
+    public function __construct (string $color, float $price, string $name, float $alcoholPercentage, string $temperature = "cold") {
         parent::__construct($color, $price, $temperature);
         $this->name = $name;
         $this->alcoholPercentage = $alcoholPercentage;
     }
 
     public function getAlcohol() {
-        return $this->alcoholPercentage . "%";
+        return $this->alcoholPercentage;
     }
 }
+
+$duvel = new Beer("blond", 3.5, "Duvel", 8.5);
+
+echo $duvel->getAlcohol() . "<br>";
+
+echo $duvel->alcoholPercentage . "<br>";
+
+echo $duvel->color . "<br>";
+
+echo $duvel->getInfo();
+
+// error:
+//$duvel = new Beverage("blond", 3.5, "cold", "Duvel", 8.5);
