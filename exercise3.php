@@ -56,6 +56,10 @@ class Beer extends Beverage
     public function getAlcohol() {
         return $this->alcoholPercentage;
     }
+
+    public function beerInfo() {
+        return "Hi, I'm $this->name and have an alcochol percentage of $this->alcoholPercentage% and I have a " . parent::getColor() . " color.";
+    }
 }
 
 $duvel = new Beer("blond", 3.5, "Duvel", 8.5);
@@ -69,3 +73,5 @@ echo $duvel->getInfo() . "<br>";
 $duvel->setColor("light");
 
 echo $duvel->getColor() . "<br>";
+
+echo $duvel->beerInfo();
